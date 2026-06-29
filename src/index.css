@@ -35,6 +35,22 @@
 
   /* Feedback */
   --color-danger: #dc2626;
+  --color-success: #15803d;
+
+  /* Deep brand green — program accents / dashboard headings */
+  --color-primary-deep: #0f766e;
+
+  /* Dashboard stat tints — decorative pastel accent set.
+     Each tint pairs a soft background with a deep "ink" for its number/icon.
+     Swap these to re-skin the dashboard stat row. */
+  --color-tint-mint: #d6f1ea;
+  --color-tint-mint-ink: #0c6b5b;
+  --color-tint-sky: #d9e8fd;
+  --color-tint-sky-ink: #1d4e80;
+  --color-tint-violet: #e7e2fb;
+  --color-tint-violet-ink: #4b2a86;
+  --color-tint-peach: #fce6d1;
+  --color-tint-peach-ink: #9a4a1a;
 }
 
 @layer base {

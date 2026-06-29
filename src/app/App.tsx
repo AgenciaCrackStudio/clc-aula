@@ -5,6 +5,7 @@ import { queryClient } from '../lib/queryClient.ts'
 import { AuthProvider } from '../features/auth/AuthProvider.tsx'
 import { useAuth } from '../features/auth/useAuth.ts'
 import { ProtectedRoute } from '../routes/ProtectedRoute.tsx'
+import { AulaLayout } from '../components/layout/AulaLayout.tsx'
 import { Spinner } from '../components/ui/Spinner.tsx'
 import { LoginPage } from '../features/auth/pages/LoginPage.tsx'
 import { RegisterPage } from '../features/auth/pages/RegisterPage.tsx'
@@ -46,7 +47,9 @@ export function App() {
 
             {/* Protected aula */}
             <Route element={<ProtectedRoute />}>
-              <Route path="/aula" element={<DashboardPage />} />
+              <Route element={<AulaLayout />}>
+                <Route path="/aula" element={<DashboardPage />} />
+              </Route>
             </Route>
 
             <Route path="*" element={<Navigate to="/" replace />} />
